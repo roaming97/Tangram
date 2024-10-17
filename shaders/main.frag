@@ -157,13 +157,14 @@ void main(){
     fragColor = vec4(col,1.0);
 }
 
-/*
+
 // wave texture
 void main(){
     vec2 uv = gl_FragCoord.xy/iResolution.xy;
     fragColor=texture(iTexture,vec2(uv.x,uv.y+sin(iTime*2.+uv.x*8.)/50.));
 }
 */
+
 void main(){
     vec2 uv = gl_FragCoord.xy/iResolution.xy;
     fragColor=texture(iTexture,uv);

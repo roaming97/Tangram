@@ -405,7 +405,7 @@ static int tangram_event_setup()
 
     init_sounds();
 
-    tangram.music = BASS_MusicLoad(0, "data/music/underwater.mod", 0, 0, BASS_SAMPLE_LOOP | BASS_MUSIC_NONINTER, 0);
+    tangram.music = BASS_MusicLoad(0, "data/music/jazzberry juice edit.mod", 0, 0, BASS_SAMPLE_LOOP | BASS_MUSIC_NONINTER, 0);
     if (!tangram.music)
     {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Failed to load music: %d\n", BASS_ErrorGetCode());
@@ -417,7 +417,7 @@ static int tangram_event_setup()
     tangram.clock.dt = 1;
 
     BASS_ChannelSetAttribute(tangram.music, BASS_ATTRIB_VOL, 1.f);
-    // BASS_ChannelPlay(tangram.music, 1);
+    BASS_ChannelPlay(tangram.music, 1);
 
     return true;
 }
@@ -501,6 +501,7 @@ static void tangram_event_exit()
     SDL_DestroyWindow(tangram.window);
     SDL_Quit();
 }
+
 
 int main(int argc, char *argv[])
 {
