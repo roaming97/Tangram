@@ -18,8 +18,6 @@
 #define STBI_NO_SIMD
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb/stb_image.h>
-#define CIMGUI_DEFINE_ENUMS_AND_STRUCTS
-#include <imgui/cimgui.h>
 
 #include "include/mt19937ar.h"
 
